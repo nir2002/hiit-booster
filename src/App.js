@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import styled from '@emotion/styled';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+      <Header />
+    </Main>
   );
 }
 
 export default App;
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(
+    rgba(71, 71, 71, 1) 54%,
+    rgba(55, 55, 55, 1) 76%,
+    rgba(5, 5, 5, 1) 100%
+  );
+`;
