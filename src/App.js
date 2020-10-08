@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import styled from '@emotion/styled';
 
+const modes = {
+  Warmup: 0,
+  Boost: 1,
+  Recover: 2,
+};
+
+const modesTitles = {
+  [modes.Warmup]: 'Warmup',
+  [modes.Boost]: 'Boost Mode',
+  [modes.Recover]: 'Recover Mode',
+};
+
 function App() {
+  const [mode, setMode] = useState(modes.Boost);
   return (
     <Main>
-      <Header />
+      <Header title={modesTitles[mode]} />
     </Main>
   );
 }
