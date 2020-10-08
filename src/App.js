@@ -20,6 +20,8 @@ const modesTitles = {
 };
 
 function App() {
+  // Disabled for CI fix until we'll use it
+  // eslint-disable-next-line no-unused-vars
   const [mode, setMode] = useState(modes.Boost);
   return (
     <Main>
