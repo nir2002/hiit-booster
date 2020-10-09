@@ -1,7 +1,16 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 function StopwatchContainer() {
-  return <div>Stopwatch</div>;
+  return <Stopwatch>04 : 36 : 00</Stopwatch>;
 }
 
 export default StopwatchContainer;
+
+const Stopwatch = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 60px;
+`;
