@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="221" height="221" viewBox="0 0 221 221">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.771" y2="1.044" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff839"/>
+      <stop offset="1" stop-color="#ff722e"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_14389" data-name="Group 14389" transform="translate(-102.239 -252.239)">
+    <ellipse id="Ellipse_194" data-name="Ellipse 194" cx="86.565" cy="86.609" rx="86.565" ry="86.609" transform="translate(126.8 275.683)" fill="url(#linear-gradient)"/>
+    <g id="Group_14366" data-name="Group 14366" transform="translate(102 252)">
+      <g id="Group_14358" data-name="Group 14358" transform="translate(0 0)">
+        <path id="Subtraction_43" data-name="Subtraction 43" d="M110.5,221a109.984,109.984,0,0,1-61.781-18.872A110.824,110.824,0,0,1,8.684,153.511,110.354,110.354,0,0,1,18.872,48.719,110.824,110.824,0,0,1,67.489,8.684,110.354,110.354,0,0,1,172.281,18.872a110.824,110.824,0,0,1,40.035,48.617,110.354,110.354,0,0,1-10.188,104.793,110.824,110.824,0,0,1-48.617,40.035A109.806,109.806,0,0,1,110.5,221Zm0-211.178A100.678,100.678,0,1,0,211.178,110.5,100.792,100.792,0,0,0,110.5,9.822Z" transform="translate(0.239 0.239)" fill="#2a2a2a"/>
+        <path id="Intersection_1" data-name="Intersection 1" d="M109.394,218.885a108.852,108.852,0,0,1-61.163-18.691A109.756,109.756,0,0,1,8.6,152.042,109.334,109.334,0,0,1,18.683,48.252,109.721,109.721,0,0,1,66.813,8.6,109.212,109.212,0,0,1,170.557,18.691a109.757,109.757,0,0,1,39.634,48.151A109.334,109.334,0,0,1,200.1,170.632a109.72,109.72,0,0,1-48.13,39.652A108.666,108.666,0,0,1,109.394,218.885Zm0-209.156a99.714,99.714,0,1,0,99.67,99.714A99.8,99.8,0,0,0,109.394,9.728Z" transform="translate(1.971 0.85)" fill="url(#linear-gradient)"/>
+      </g>
+      <text id="Boost_" data-name="Boost!" transform="translate(111.239 119.239)" fill="#3b3b3b" font-size="25" font-family="Helvetica" letter-spacing="-0.02em"><tspan x="-34.187" y="0"></tspan></text>
+    </g>
+  </g>
+</svg>
