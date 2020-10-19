@@ -7,13 +7,13 @@ import WorkoutControls from './components/containers/WorkoutControls';
 import LapsList from './components/containers/LapsList';
 import MediaPlayer from './components/containers/MediaPlayer';
 
-const modes = {
+export const modes = {
   Warmup: 0,
   Boost: 1,
   Recover: 2,
 };
 
-const modesTitles = {
+export const modesTitles = {
   [modes.Warmup]: 'Warmup',
   [modes.Boost]: 'Boost Mode',
   [modes.Recover]: 'Recover Mode',

@@ -55,4 +55,5 @@ const ModeSwitchText = styled.div`
   top: 48%;
   left: 32%;
   font-size: 33px;
+  color: #3b3b3b;
 `;
