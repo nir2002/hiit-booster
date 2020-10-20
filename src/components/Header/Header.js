@@ -13,6 +13,6 @@ const HeaderContainer = styled.header`
   align-items: center;
   color: #fff;
   font-size: 21px;
-  flex: 0.12;
+  flex: 0.22;
   border-bottom: solid 1px #5f5f5f;
 `;

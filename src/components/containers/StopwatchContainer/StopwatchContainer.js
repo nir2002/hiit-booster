@@ -9,6 +9,7 @@ export default StopwatchContainer;
 
 const Stopwatch = styled.div`
   display: flex;
+  flex: 0.15;
   justify-content: center;
   margin-top: 20px;
   color: #fff;

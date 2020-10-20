@@ -8,12 +8,11 @@ function WorkoutControls() {
   return (
     <Container>
       <EndWorkout>
-        <EndWorkoutIcon icon={faStopCircle} />
+        <EndWorkoutIcon icon={faStopCircle} size="1x" />
         End Workout
       </EndWorkout>
       <ModeToggleBtn>
         <ModeSwitchIcon />
-        <ModeSwitchText>Boost!</ModeSwitchText>
       </ModeToggleBtn>
     </Container>
   );
@@ -32,11 +31,16 @@ const Container = styled.div`
 const EndWorkout = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 20px;
+  /* border: 1px solid black; */
+  padding: 8px;
+  border-radius: 15px;
+  background: rgb(80 80 80);
 `;
 
 const EndWorkoutIcon = styled(FontAwesomeIcon)`
-  padding: 0 7px;
+  margin-right: 6px;
 `;
 
 const ModeToggleBtn = styled.div`

@@ -22,7 +22,7 @@ export const modesTitles = {
 function App() {
   // Disabled for CI fix until we'll use it
   // eslint-disable-next-line no-unused-vars
-  const [mode, setMode] = useState(modes.Boost);
+  const [mode, setMode] = useState(modes.Recover);
   return (
     <Main>
       <Header title={modesTitles[mode]} />
