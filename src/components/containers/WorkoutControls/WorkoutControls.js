@@ -53,11 +53,3 @@ const ModeToggleBtn = styled.div`
 const ModeSwitchIcon = styled(BoostModeIcon)`
   margin-top: 40px;
 `;
-
-const ModeSwitchText = styled.div`
-  position: absolute;
-  top: 48%;
-  left: 32%;
-  font-size: 33px;
-  color: #3b3b3b;
-`;

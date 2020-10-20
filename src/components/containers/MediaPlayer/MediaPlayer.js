@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faPlayCircle,
+  // faPlayCircle,
   faPauseCircle,
   faStepForward,
   faStepBackward,
