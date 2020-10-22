@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { modes } from '../../../App';
+import { modes } from '../../../screens/WorkoutScreen';
 import Lap from './../../Lap';
 
 function Laps() {
