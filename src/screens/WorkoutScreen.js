@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import Header from './../components/Header';
-import StopwatchContainer from './../components/containers/StopwatchContainer';
+import StopwatchDisplay from '../components/containers/StopwatchDisplay';
 import WorkoutControls from './../components/containers/WorkoutControls';
 import LapsList from './../components/containers/LapsList';
 import MediaPlayer from './../components/containers/MediaPlayer';
+import Stopwatch from './../utils/stopwatch';
+
+const stopwatch = new Stopwatch(60);
 
 export const modes = {
   Warmup: 0,
@@ -20,13 +23,17 @@ export const modesTitles = {
 };
 
 function WorkoutScreen() {
+  useEffect(() => {
+    stopwatch.start();
+  });
+
   // Disabled for CI fix until we'll use it
   // eslint-disable-next-line no-unused-vars
   const [mode, setMode] = useState(modes.Recover);
   return (
     <WorkoutScreenContainer>
       <Header title={modesTitles[mode]} />
-      <StopwatchContainer />
+      <StopwatchDisplay stopwatch={stopwatch} />
       <WorkoutControls />
       <LapsList />
       <MediaPlayer />

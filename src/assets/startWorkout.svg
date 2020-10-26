@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="149" height="149" viewBox="0 0 149 149">
+  <g id="Group_14372" data-name="Group 14372" transform="translate(-113 -475)">
+    <g id="Group_14371" data-name="Group 14371" transform="translate(113.231 475.231)">
+      <path id="Subtraction_43" data-name="Subtraction 43" d="M74.5,149a74.152,74.152,0,0,1-41.654-12.724A74.718,74.718,0,0,1,5.855,103.5a74.4,74.4,0,0,1,6.869-70.652A74.718,74.718,0,0,1,45.5,5.855a74.4,74.4,0,0,1,70.652,6.869A74.718,74.718,0,0,1,143.145,45.5a74.4,74.4,0,0,1-6.869,70.652A74.718,74.718,0,0,1,103.5,143.145,74.033,74.033,0,0,1,74.5,149Zm0-142.378A67.878,67.878,0,1,0,142.378,74.5,67.955,67.955,0,0,0,74.5,6.622Z" transform="translate(-0.231 -0.231)" fill="#f6a020"/>
+    </g>
+    <circle id="Ellipse_187" data-name="Ellipse 187" cx="59.5" cy="59.5" r="59.5" transform="translate(128 490)" fill="#f6a020" opacity="0.17"/>
+    <text id="Start" transform="translate(160 560)" fill="#fff" font-size="27" font-family="Helvetica-Light, Helvetica" font-weight="300" letter-spacing="-0.02em"><tspan x="0" y="0">Start</tspan></text>
+  </g>
+</svg>

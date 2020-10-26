@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import styled from '@emotion/styled';
 import WorkoutScreen from './screens/WorkoutScreen';
+import HomeScreen from './screens/HomeScreen';
+
+export const Screens = {
+  HomeScreen: 0,
+  WorkoutScreen: 1,
+};
 
 function App() {
-  return (
-    <Main>
-      <WorkoutScreen />
-    </Main>
-  );
+  const [screen, setScreen] = useState(Screens.HomeScreen);
+  const screens = {
+    [Screens.HomeScreen]: <HomeScreen setScreen={setScreen} />,
+    [Screens.WorkoutScreen]: <WorkoutScreen />,
+  };
+
+  return <Main>{screens[screen]}</Main>;
 }
 
 export default App;
