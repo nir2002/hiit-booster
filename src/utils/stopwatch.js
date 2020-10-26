@@ -1,12 +1,21 @@
 export default function Stopwatch(deltaInMsParam = 1) {
   const deltaInMs = deltaInMsParam;
   let timeInMs = 0;
+  let offset;
   let stopwatchInterval = undefined;
 
+  this.delta = function () {
+    const now = Date.now();
+    const d = now - offset;
+    offset = now;
+
+    return d;
+  };
+
   this.start = function () {
-    console.log('Stopwatch started');
+    offset = Date.now();
     stopwatchInterval = setInterval(() => {
-      timeInMs = timeInMs + deltaInMs;
+      timeInMs = timeInMs + this.delta();
     }, deltaInMs);
   };
 
