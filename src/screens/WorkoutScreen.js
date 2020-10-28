@@ -6,9 +6,9 @@ import StopwatchDisplay from '../components/containers/StopwatchDisplay';
 import WorkoutControls from './../components/containers/WorkoutControls';
 import LapsList from './../components/containers/LapsList';
 import MediaPlayer from './../components/containers/MediaPlayer';
-import Stopwatch from './../utils/stopwatch';
+import Stopwatch from '../utils/Stopwatch';
 
-const stopwatch = new Stopwatch(60);
+const stopwatch = new Stopwatch({ deltaInMsParam: 60 });
 
 export const modes = {
   Warmup: 0,

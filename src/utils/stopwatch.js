@@ -1,4 +1,4 @@
-export default function Stopwatch(deltaInMsParam = 1) {
+export default function Stopwatch({ deltaInMsParam = 1 } = {}) {
   const deltaInMs = deltaInMsParam;
   let timeInMs = 0;
   let offset;
@@ -6,10 +6,10 @@ export default function Stopwatch(deltaInMsParam = 1) {
 
   this.delta = function () {
     const now = Date.now();
-    const d = now - offset;
+    const timeDiff = now - offset;
     offset = now;
 
-    return d;
+    return timeDiff;
   };
 
   this.start = function () {
