@@ -2,11 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { modes } from '../../screens/WorkoutScreen';
 
-function Lap({ mode }) {
+function Lap({ mode, time }) {
   return (
     <LapResult>
       <LapMode mode={mode} />
-      04 : 36: 00
+      {time}
     </LapResult>
   );
 }

@@ -1,19 +1,13 @@
-import styled from '@emotion/styled';
 import React from 'react';
-import { modes } from '../../../screens/WorkoutScreen';
+import styled from '@emotion/styled';
 import Lap from './../../Lap';
 
-function Laps() {
+function Laps({ laps = [] } = {}) {
   return (
     <LapsList>
-      <Lap mode={modes.Boost} />
-      <Lap mode={modes.Recover} />
-      <Lap mode={modes.Boost} />
-      <Lap mode={modes.Recover} />
-      <Lap mode={modes.Boost} />
-      <Lap mode={modes.Recover} />
-      <Lap mode={modes.Boost} />
-      <Lap mode={modes.Recover} />
+      {laps.map((lap, index) => (
+        <Lap {...lap} key={index} />
+      ))}
     </LapsList>
   );
 }

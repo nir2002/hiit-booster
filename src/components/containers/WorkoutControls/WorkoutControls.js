@@ -2,17 +2,27 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStopCircle } from '@fortawesome/free-solid-svg-icons';
-import { ReactComponent as BoostModeIcon } from '../../../assets/boostModeIcon.svg';
+import { ReactComponent as BoostModeIcon } from '../../../assets/boost-mode-icon.svg';
+import { ReactComponent as RecoverModeIcon } from '../../../assets/recover-mode-icon.svg';
+import { css } from '@emotion/core';
+import { modes } from '../../../screens/WorkoutScreen';
 
-function WorkoutControls() {
+function WorkoutControls({ currentMode, toggleMode }) {
+  const modeBtnOnClick = (event) => {
+    event.preventDefault();
+    toggleMode();
+  };
+
+  const NextModeIcon = currentMode === modes.Boost ? RecoverIcon : BoostIcon;
+
   return (
     <Container>
       <EndWorkout>
         <EndWorkoutIcon icon={faStopCircle} size="1x" />
         End Workout
       </EndWorkout>
-      <ModeToggleBtn>
-        <ModeSwitchIcon />
+      <ModeToggleBtn onClick={modeBtnOnClick}>
+        <NextModeIcon />
       </ModeToggleBtn>
     </Container>
   );
@@ -50,6 +60,14 @@ const ModeToggleBtn = styled.div`
   align-items: center;
 `;
 
-const ModeSwitchIcon = styled(BoostModeIcon)`
+const modeButtonStyle = css`
   margin-top: 40px;
+`;
+
+const BoostIcon = styled(BoostModeIcon)`
+  ${modeButtonStyle}
+`;
+
+const RecoverIcon = styled(RecoverModeIcon)`
+  ${modeButtonStyle}
 `;

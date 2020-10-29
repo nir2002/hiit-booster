@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="221" height="221" viewBox="0 0 221 221">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.342" y2="0.979" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#39ffd1"/>
+      <stop offset="1" stop-color="#2e98ff"/>
+    </linearGradient>
+  </defs>
+  <ellipse id="Ellipse_188" data-name="Ellipse 188" cx="88.03" cy="88.074" rx="88.03" ry="88.074" transform="translate(23 22)" fill="url(#linear-gradient)"/>
+  <g id="Group_14358" data-name="Group 14358" transform="translate(0)">
+    <path id="Subtraction_43" data-name="Subtraction 43" d="M110.5,221a109.984,109.984,0,0,1-61.781-18.872A110.824,110.824,0,0,1,8.684,153.511,110.354,110.354,0,0,1,18.872,48.719,110.824,110.824,0,0,1,67.489,8.684,110.354,110.354,0,0,1,172.281,18.872a110.824,110.824,0,0,1,40.035,48.617,110.354,110.354,0,0,1-10.188,104.793,110.824,110.824,0,0,1-48.617,40.035A109.806,109.806,0,0,1,110.5,221Zm0-211.178A100.678,100.678,0,1,0,211.178,110.5,100.792,100.792,0,0,0,110.5,9.822Z" transform="translate(0 0)" fill="#2a2a2a"/>
+    <path id="Intersection_1" data-name="Intersection 1" d="M109.555,219.207A109.012,109.012,0,0,1,48.3,200.488,109.918,109.918,0,0,1,8.609,152.266,109.5,109.5,0,0,1,18.71,48.323a109.882,109.882,0,0,1,48.2-39.71,109.372,109.372,0,0,1,103.9,10.105A109.918,109.918,0,0,1,210.5,66.941a109.5,109.5,0,0,1-10.1,103.942,109.882,109.882,0,0,1-48.2,39.71A108.825,108.825,0,0,1,109.555,219.207Zm0-209.464A99.861,99.861,0,1,0,209.371,109.6,99.952,99.952,0,0,0,109.555,9.743Z" transform="translate(1.563 0.449)" fill="url(#linear-gradient)"/>
+    <text id="Recover" transform="translate(112 119)" fill="#3c3c3c" font-size="26" font-family="Helvetica" letter-spacing="-0.02em"><tspan x="-45.442" y="0">Recover</tspan></text>
+  </g>
+</svg>

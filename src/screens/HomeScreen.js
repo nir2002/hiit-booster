@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ReactComponent as StartWorkoutIcon } from '../assets/startWorkout.svg';
+import { ReactComponent as StartWorkoutIcon } from '../assets/start-workout-icon.svg';
 import { ReactComponent as SpotifyIcon } from '../assets/spotify-brands.svg';
 import RunningBackground from './../assets/running-background.png';
 import { Screens } from '../App';

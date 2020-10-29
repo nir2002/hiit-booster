@@ -16,26 +16,35 @@ export const modes = {
   Recover: 2,
 };
 
-export const modesTitles = {
-  [modes.Warmup]: 'Warmup',
-  [modes.Boost]: 'Boost Mode',
-  [modes.Recover]: 'Recover Mode',
-};
-
 function WorkoutScreen() {
+  // Disabled for CI fix until we'll use it
+  // eslint-disable-next-line no-unused-vars
+  const [mode, setMode] = useState(modes.Recover);
+  const [laps, setLaps] = useState([]);
+
   useEffect(() => {
     stopwatch.start();
   });
 
-  // Disabled for CI fix until we'll use it
-  // eslint-disable-next-line no-unused-vars
-  const [mode, setMode] = useState(modes.Recover);
+  const addLap = (lap) => {
+    setLaps([lap, ...laps]);
+  };
+
+  const toggleMode = () => {
+    setMode((prevMode) => {
+      const nextMode = prevMode === modes.Boost ? modes.Recover : modes.Boost;
+      addLap({ time: stopwatch.toString(), mode: prevMode });
+
+      return nextMode;
+    });
+  };
+
   return (
     <WorkoutScreenContainer>
-      <Header title={modesTitles[mode]} />
+      {/* <Header mode={mode} /> */}
       <StopwatchDisplay stopwatch={stopwatch} />
-      <WorkoutControls />
-      <LapsList />
+      <WorkoutControls currentMode={mode} toggleMode={toggleMode} />
+      <LapsList laps={laps} />
       <MediaPlayer />
     </WorkoutScreenContainer>
   );

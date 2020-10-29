@@ -5,7 +5,7 @@ function StopwatchDisplay({ stopwatch }) {
   const [displayTime, setDisplayTime] = useState('');
   useEffect(() => {
     setInterval(() => {
-      setDisplayTime(stopwatch.displayTime());
+      setDisplayTime(stopwatch.toString());
     }, 60);
   });
 

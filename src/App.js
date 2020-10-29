@@ -9,6 +9,12 @@ export const Screens = {
   WorkoutScreen: 1,
 };
 
+export const modes = {
+  Warmup: 0,
+  Boost: 1,
+  Recover: 2,
+};
+
 function App() {
   const [screen, setScreen] = useState(Screens.HomeScreen);
   const screens = {

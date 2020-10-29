@@ -45,7 +45,7 @@ export default function Stopwatch({ deltaInMsParam = 1 } = {}) {
     return Math.floor(timeInMs / 1000 / 60);
   };
 
-  this.displayTime = function () {
+  this.snapshot = function () {
     const isSingleDigitNumber = (num) => String(num).length === 1;
 
     let minutes = this.getStopwatchMinutes();
@@ -64,6 +64,11 @@ export default function Stopwatch({ deltaInMsParam = 1 } = {}) {
       ? `0${milliseconds}`
       : milliseconds;
 
-    return `${minutes} : ${seconds} : ${milliseconds}`;
+    return { minutes, seconds, milliseconds };
   };
 }
+
+Stopwatch.prototype.toString = function () {
+  const { minutes, seconds, milliseconds } = this.snapshot();
+  return `${minutes} : ${seconds} : ${milliseconds}`;
+};
