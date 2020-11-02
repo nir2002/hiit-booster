@@ -2,9 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { modes } from '../../screens/WorkoutScreen';
 
-function Lap({ mode, time }) {
+function Lap({ mode, time, isCurrent }) {
   return (
-    <LapResult>
+    <LapResult mode={mode} isCurrent={isCurrent}>
       <LapMode mode={mode} />
       {time}
     </LapResult>
@@ -18,9 +18,13 @@ const LapResult = styled.div`
   justify-content: center;
   align-items: center;
   color: #fff;
-  width: 160px;
-  min-height: 30px;
+  width: ${(props) => (props.isCurrent ? `200px` : `160px`)};
+  min-height: ${(props) => (props.isCurrent ? `50px` : `30px`)};
   padding: 4px 0;
+  border: ${(props) =>
+    props.isCurrent
+      ? `1px solid ${props.mode === modes.Boost ? '#ff9408' : '#0894FF'}`
+      : `none`};
   border-radius: 20px;
   background: #424242;
   margin-top: 8px;

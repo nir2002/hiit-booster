@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
-import Header from './../components/Header';
 import StopwatchDisplay from '../components/containers/StopwatchDisplay';
 import WorkoutControls from './../components/containers/WorkoutControls';
 import LapsList from './../components/containers/LapsList';
@@ -9,6 +8,7 @@ import MediaPlayer from './../components/containers/MediaPlayer';
 import Stopwatch from '../utils/Stopwatch';
 
 const stopwatch = new Stopwatch({ deltaInMsParam: 60 });
+const lapStopwatch = new Stopwatch({ deltaInMsParam: 60 });
 
 export const modes = {
   Warmup: 0,
@@ -20,20 +20,16 @@ function WorkoutScreen() {
   // Disabled for CI fix until we'll use it
   // eslint-disable-next-line no-unused-vars
   const [mode, setMode] = useState(modes.Recover);
-  const [laps, setLaps] = useState([]);
 
   useEffect(() => {
     stopwatch.start();
-  });
 
-  const addLap = (lap) => {
-    setLaps([lap, ...laps]);
-  };
+    return () => stopwatch.stop();
+  }, []);
 
   const toggleMode = () => {
     setMode((prevMode) => {
       const nextMode = prevMode === modes.Boost ? modes.Recover : modes.Boost;
-      addLap({ time: stopwatch.toString(), mode: prevMode });
 
       return nextMode;
     });
@@ -44,7 +40,7 @@ function WorkoutScreen() {
       {/* <Header mode={mode} /> */}
       <StopwatchDisplay stopwatch={stopwatch} />
       <WorkoutControls currentMode={mode} toggleMode={toggleMode} />
-      <LapsList laps={laps} />
+      <LapsList currentMode={mode} stopwatch={lapStopwatch} />
       <MediaPlayer />
     </WorkoutScreenContainer>
   );
