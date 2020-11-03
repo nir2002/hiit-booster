@@ -7,17 +7,22 @@ import { ReactComponent as RecoverModeIcon } from '../../../assets/recover-mode-
 import { css } from '@emotion/core';
 import { modes } from '../../../screens/WorkoutScreen';
 
-function WorkoutControls({ currentMode, toggleMode }) {
+function WorkoutControls({ currentMode, toggleMode, endWorkout }) {
   const modeBtnOnClick = (event) => {
     event.preventDefault();
     toggleMode();
+  };
+
+  const endWorkoutBtnOnClick = (event) => {
+    event.preventDefault();
+    endWorkout();
   };
 
   const NextModeIcon = currentMode === modes.Boost ? RecoverIcon : BoostIcon;
 
   return (
     <Container>
-      <EndWorkout>
+      <EndWorkout onClick={endWorkoutBtnOnClick}>
         <EndWorkoutIcon icon={faStopCircle} size="1x" />
         End Workout
       </EndWorkout>

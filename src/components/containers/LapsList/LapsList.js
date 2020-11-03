@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled from '@emotion/styled';
 import Lap from './../../Lap';
+import { modes } from '../../../screens/WorkoutScreen';
 
 function Laps({ currentMode, stopwatch } = {}) {
   const [currentLapTime, setCurrentLapTime] = useState('');
@@ -30,8 +31,10 @@ function Laps({ currentMode, stopwatch } = {}) {
       addLap({ time: stopwatch.toString(), mode: previousModeRef.current });
 
       stopwatch.stop();
-      stopwatch.start();
-      previousModeRef.current = currentMode;
+      if (currentMode !== modes.End) {
+        stopwatch.start();
+        previousModeRef.current = currentMode;
+      }
     } else {
       didMountRef.current = true;
     }
@@ -39,7 +42,14 @@ function Laps({ currentMode, stopwatch } = {}) {
 
   return (
     <LapsList>
-      <Lap mode={currentMode} time={currentLapTime} key={0} isCurrent={true} />
+      {currentMode !== modes.End && (
+        <Lap
+          mode={currentMode}
+          time={currentLapTime}
+          key={0}
+          isCurrent={true}
+        />
+      )}
       {laps.map((lap, index) => (
         <Lap {...lap} key={index + 1} />
       ))}
@@ -54,6 +64,6 @@ const LapsList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 0.65;
+  flex: 1;
   overflow-y: scroll;
 `;
