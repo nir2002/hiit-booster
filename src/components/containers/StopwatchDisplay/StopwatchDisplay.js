@@ -7,7 +7,8 @@ function StopwatchDisplay({ stopwatch }) {
 
   useEffect(() => {
     stopwatchIntervalRef.current = setInterval(() => {
-      setDisplayTime(stopwatch.toString());
+      const { minutes, seconds } = stopwatch.snapshot();
+      setDisplayTime(`${minutes} : ${seconds}`);
     }, 60);
 
     return () => {

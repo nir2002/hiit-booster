@@ -14,6 +14,7 @@ export const modes = {
   Warmup: 0,
   Boost: 1,
   Recover: 2,
+  End: 3,
 };
 
 function WorkoutScreen() {
@@ -35,11 +36,24 @@ function WorkoutScreen() {
     });
   };
 
+  const endWorkout = () => {
+    stopwatch.pause();
+    setMode(modes.End);
+  };
+
   return (
     <WorkoutScreenContainer>
       {/* <Header mode={mode} /> */}
       <StopwatchDisplay stopwatch={stopwatch} />
-      <WorkoutControls currentMode={mode} toggleMode={toggleMode} />
+      {mode === modes.End ? (
+        <h1 style={{ color: 'pink' }}>Great Workout!</h1>
+      ) : (
+        <WorkoutControls
+          currentMode={mode}
+          toggleMode={toggleMode}
+          endWorkout={endWorkout}
+        />
+      )}
       <LapsList currentMode={mode} stopwatch={lapStopwatch} />
       <MediaPlayer />
     </WorkoutScreenContainer>
@@ -52,4 +66,5 @@ const WorkoutScreenContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
+  align-items: center;
 `;
