@@ -19,7 +19,7 @@ function App() {
   const [screen, setScreen] = useState(Screens.HomeScreen);
   const screens = {
     [Screens.HomeScreen]: <HomeScreen setScreen={setScreen} />,
-    [Screens.WorkoutScreen]: <WorkoutScreen />,
+    [Screens.WorkoutScreen]: <WorkoutScreen setScreen={setScreen}/>,
   };
 
   return <Main>{screens[screen]}</Main>;
