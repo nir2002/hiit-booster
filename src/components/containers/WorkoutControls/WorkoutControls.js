@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStopCircle } from '@fortawesome/free-solid-svg-icons';
+import { faStopCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as BoostModeIcon } from '../../../assets/boost-mode-icon.svg';
 import { ReactComponent as RecoverModeIcon } from '../../../assets/recover-mode-icon.svg';
 import { css } from '@emotion/core';
